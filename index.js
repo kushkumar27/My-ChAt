@@ -40,4 +40,6 @@ io.on('connection', socket => {
 app.get("/",(req,res)=>{
 	res.sendFile(__dirname+"/public");
 })
-server.listen(8000,function(){console.log("this is my server")});
+
+let port = process.env.PORT || 8000
+server.listen(port,function(){console.log("this is my server")});
